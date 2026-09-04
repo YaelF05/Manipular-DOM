@@ -18,8 +18,12 @@ descripcion.style.fontSize = '18px';
 // 1. Selecciona el botón 'btn-agregar' y el input 'nueva-tarea'
 // 2. Agrega un escuchador de eventos (addEventListener) para el clic del botón
 // 3. Captura el valor del input y muéstralo en la consola (console.log)
+const botonAgregar = document.getElementById('btn-agregar');
+const nuevaTarea = document.getElementById('nueva-tarea');
 
-
+botonAgregar.addEventListener('click', function () {
+    console.log(nuevaTarea.value);
+});
 
 // Reto 3: Creación Dinámica de Nodos ---
 // 1. Selecciona el contenedor 'lista-tareas' (el elemento <ul>)
