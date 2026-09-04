@@ -21,10 +21,6 @@ descripcion.style.fontSize = '18px';
 const botonAgregar = document.getElementById('btn-agregar');
 const nuevaTarea = document.getElementById('nueva-tarea');
 
-botonAgregar.addEventListener('click', function () {
-    console.log(nuevaTarea.value);
-});
-
 // Reto 3: Creación Dinámica de Nodos ---
 // 1. Selecciona el contenedor 'lista-tareas' (el elemento <ul>)
 // 2. Modifica el evento del Reto 2 para que, en lugar de usar console.log:
@@ -32,8 +28,16 @@ botonAgregar.addEventListener('click', function () {
 //    b) Asigna el texto del input al nuevo 'li' usando .textContent
 //    c) Inserta el 'li' dentro del '<ul>' usando .appendChild()
 //    d) Limpia el valor del input y devuélvele el foco (.focus())
+const listaTareas = document.getElementById('lista-tareas');
 
+botonAgregar.addEventListener('click', function () {
+    const nuevoElemento = document.createElement('li');
+    nuevoElemento.textContent = nuevaTarea.value;
+    listaTareas.appendChild(nuevoElemento);
 
+    nuevaTarea.value = '';
+    nuevaTarea.focus();
+});
 
 // Reto 4: Eliminación y Delegación de Eventos ---
 // 1. Agrega un escuchador de eventos al contenedor PADRE ('lista-tareas')
