@@ -6,7 +6,12 @@
 // Reto 1: Selección y Modificación Estática ---
 // 1. Selecciona el elemento con ID 'titulo-principal' y cambia su texto a "Mi Panel de Control"
 // 2. Selecciona el párrafo con la clase 'descripcion' y cambia su color de fuente y tamaño utilizando .style
+const tituloPrincipal = document.getElementById('titulo-principal');
+tituloPrincipal.textContent = "Mi Panel de Control";
 
+const descripcion = document.querySelector('.descripcion');
+descripcion.style.color = 'blue';
+descripcion.style.fontSize = '18px';
 
 
 // Reto 2: Escucha de Eventos (Captura) ---
